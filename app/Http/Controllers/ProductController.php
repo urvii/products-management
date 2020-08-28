@@ -84,8 +84,10 @@ class ProductController extends Controller
         ]);
         if (isset($request->image)) {
             $photo = $request->image;
-            $name = $photo->getClientOriginalName();
-            $filename = $photo->store('uploads', 'public');
+            $name = time().'.'.$photo->getClientOriginalExtension();
+            $destinationPath = public_path('/uploads');
+            $photo->move($destinationPath, $name);
+            $filename = 'uploads/'.$name;
         }
         $product = new Product();
         $product->name = $request->name;
@@ -141,8 +143,10 @@ class ProductController extends Controller
         $filename = $product->image;
         if (isset($request->image)) {
             $photo = $request->image;
-            $name = $photo->getClientOriginalName();
-            $filename = $photo->store('uploads', 'public');
+            $name = time().'.'.$photo->getClientOriginalExtension();
+            $destinationPath = public_path('/uploads');
+            $photo->move($destinationPath, $name);
+            $filename = 'uploads/'.$name;
         }
         
         $product->name = $request->name;

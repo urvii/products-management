@@ -12,6 +12,6 @@ npm-debug.log
 yarn-error.log
 webpack.mix.js
 phpunit.xml
-.env.example
+# .env.example
 composer.lock
 package-lock.json

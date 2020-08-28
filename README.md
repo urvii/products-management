@@ -1,29 +1,10 @@
-# Product Management System using Laravel7
+# Product Management
 
-1)Add in terminal
+git clone https://github.com/urvii/products-management.git
+cd products-management
+composer install
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
 
-laravel new ProductManagement
-composer global update
-cd ProductManagement
-
-2)create .env file if not exists and the change mysql related database,username,password in .env
-
-3)php artisan key:generate
-
-4)Add in terminal
-
-php artisan make:model Product -mcr (to create resource controller)
-
-5)Add resource route in web.php
-
-6)Add database seeder for categoty
-
-php artisan make:seeder CategorySeeder
-
-
-
-
-
-
-
-
+go to this url ->  http://127.0.0.1:8000/products

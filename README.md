@@ -8,6 +8,8 @@ composer install
 
 php artisan key:generate
 
+changes in .env file
+
 php artisan migrate --seed
 
 php artisan serve
